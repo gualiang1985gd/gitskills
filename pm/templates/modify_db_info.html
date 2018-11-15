@@ -1,0 +1,44 @@
+{% extends 'nav_bar.html' %}
+{% block title %}Modify DB Information{% endblock %}
+{% block head%}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/base.css') }}">
+{% endblock %}
+{% block main %}
+    <h1 class="text-centered">Modify DB Information</h1>
+    <br>
+    <form action="{{ url_for('modify_db_info') }}" method="POST">
+    <div class="div-centered">
+        <div class="form-group">
+            <input type="hidden" value="{{ number }}" name="number" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">site: </label><input type="text" value="{{ site }}" name="site" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">sid: </label><input type="text" value="{{ sid }}" name="sid" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">username: </label><input type="text" value="{{ username }}" name="username" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">password: </label><input type="password" value="{{ password }}" name="password" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">user login status: </label><input type="text" value="{{ login_status }}" name="login_status" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">is it null: </label><input type="text" value="{{ null }}" name="null" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">create table permission: </label><input type="text" value="{{ create_table_permission }}" name="create_table_permission" class="form-control">
+        </div>
+        <div class="form-group">
+            <div class="commit_size">
+                <button type="submit" class="btn btn-block btn-primary">Commit</button>
+                <p></p>
+                <a href="{{ url_for('db_info') }}" class="btn btn-block btn-primary btn-back">Return</a>
+            </div>
+        </div>
+    </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'nav_bar.html' %}
+{% block title %}Import Server Select{% endblock %}
+{% block head%}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/base.css') }}">
+{% endblock %}
+{% block main %}
+    <h1 class="">Import Server Select</h1>
+    <br>
+{#    <h1 class="text-centered">{{ ftx_path }}</h1>#}
+    <form action="{{ url_for('import_server_select') }}" method="POST">
+        <div class="div-centered">
+            <div class="form-group">
+                <select class="form-control" name="site">
+                    <option value="null">--- select site ---</option>
+                        <option value="DEV">DEV</option>
+                        <option value="SIT01">SIT01</option>
+                        <option value="SIT02">SIT02</option>
+                        <option value="PRE-SIT">PRE-SIT</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+{#                {% for path in ftx_path %}#}
+{#                    <div class="form-group">#}
+{#                        <p class="form-group">{{ ftx_path }}</p>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+            </div>
+            <div class="form-group">
+                <div class="commit_size">
+                    <button type="submit" class="btn btn-block btn-primary">Commit</button>
+                    <p></p>
+                    <a href="{{ url_for('index') }}" class="btn btn-block btn-primary btn-back">Return</a>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

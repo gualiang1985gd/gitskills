@@ -1,0 +1,72 @@
+{% extends 'nav_bar.html' %}
+{% block title %}DB Info{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/base.css') }}">
+{% endblock %}
+{% block main %}
+    <h1 class="text-centered">DB Imformation</h1>
+    <form class="navbar-form" action="{{ url_for('search_db_info') }}" method="post">
+        <div class="form-group">
+            <hr>
+            <input name="q" type="text" class="frame-search" placeholder="input keywords to search">
+            <button style="margin-left:40px" type="submit" class="btn btn-primary btn-lg">search</button>
+            <a href="{{ url_for("db_info") }}"><button style="margin-left:40px" type="button" class="btn btn-primary btn-lg">show all</button></a>
+        </div>
+    </form>
+    <div class="form-group">
+        <font size="2" color="red">{{ m }}</font>
+    </div>
+{#            {% for db in db_info %}#}
+{#                <div class="div-left-up" style="margin-bottom: 80px">#}
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>site</th>
+                                <th>sid</th>
+                                <th>username</th>
+                                <th>password</th>
+                                <th>user login status</th>
+                                <th>is it null</th>
+                                <th>create table permission</th>
+                                <th>action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for db in db_info %}
+                                <tr>
+                                    <td>{{ db.number|safe }}</td>
+                                    <td>{{ db.site|safe }}</td>
+                                    <td>{{ db.sid|safe }}</td>
+                                    <td>{{ db.username|safe }}</td>
+                                    <td>{{ db.password|safe }}</td>
+                                    <td>{{ db.login_status|safe }}</td>
+                                    <td>{{ db.null|safe }}</td>
+                                    <td>{{ db.create_table_permission|safe }}</td>
+                                    <form action="{{ url_for('modify_db_info') }}" method="GET">
+                                        <input type="hidden" name="number" value="{{ db.number }}">
+                                        <input type="hidden" name="site" value="{{ db.site }}">
+                                        <input type="hidden" name="sid" value="{{ db.sid }}">
+                                        <input type="hidden" name="username" value="{{ db.username }}">
+                                        <input type="hidden" name="password" value="{{ db.password }}">
+                                        <input type="hidden" name="login_status" value="{{ db.login_status }}">
+                                        <input type="hidden" name="null" value="{{ db.null }}">
+                                        <input type="hidden" name="create_table_permission" value="{{ db.create_table_permission }}">
+                                        <td><button type="submit" class="btn btn-primary btn-sm">edit</button></td>
+                                    </form>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+{#                    <h5><label for=""><font color="#0000FF">site:  </font>{{ db.site|safe }}</label><label for="" style="margin-left: 50px"><font color="#0000FF">sid:  </font>{{ db.sid|safe }}</label></h5>#}
+{#                    <h5><label for=""><font color="#0000FF">username:  </font>{{ db.username|safe }}</label><label for="" style="margin-left: 50px"><font color="#0000FF">password: </font>{{ db.password|safe }}</label></h5>#}
+{#                    <h5><label for=""><font color="#0000FF">user login status:  </font>{{ db.login_status|safe }}</label></h5>#}
+{#                    <h5><label for=""><font color="#0000FF">is it null:  </font>{{ db.null|safe }}</label><label for=""><font color="#0000FF" style="margin-left: 50px">create table permission:  </font>{{ db.create_table_permission|safe }}</label></h5>#}
+{#                </div>#}
+{#                <div style="width: 100%">#}
+{#                    <hr>#}
+{#                </div>#}
+{#            {% endfor %}#}
+
+{% endblock %}

@@ -1,0 +1,69 @@
+.logo{
+    height: 120%;
+    width: 100px;
+}
+
+body{
+    /*background: #f3f3f3;*/
+    background: #ffffff;
+}
+
+.frame-search{
+    width: 300px;
+    height: 45px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.div-centered{
+    width:300px;
+    height:300px;
+    margin: 0 auto;
+}
+
+.button_size{
+    width: 120px;
+}
+
+.commit_size{
+    width: 300px;
+    margin: 0 auto;
+}
+
+.text-centered{
+    text-align:center;
+}
+
+.form-order{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.frame-search {
+    width: 300px;
+    height: 46px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.div-left-up{
+    width: 400px;
+    height: 50px;
+    margin: 30px;
+}
