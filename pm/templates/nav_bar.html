@@ -26,7 +26,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img class='logo' src="{{ url_for('static',filename='images/hsbc.jpg') }}" width=auto height=auto alt="">
+                    <img class='logo' src="{{ url_for('static',filename='images/hsbc-logo.jpg') }}" width=auto height=auto alt="">
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -47,9 +47,9 @@
                                 <li><a href="{{ url_for('reset_password') }}">Reset Password(App User)</a></li>
 {#                                <li><a href="#">Data Import</a></li>#}
                                 <li role="separator" class="divider"></li>
-                                <li><a href="{{ url_for('import_server_select') }}">Data Import</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">/</a></li>
+                                <li><a href="{{ url_for('page_jump') }}">Common Tools</a></li>
+{#                                <li role="separator" class="divider"></li>#}
+{#                                <li><a href="#">/</a></li>#}
                             </ul>
                         </li>
                 </ul>

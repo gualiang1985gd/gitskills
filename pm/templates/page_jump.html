@@ -1,0 +1,51 @@
+{% extends 'nav_bar.html' %}
+{% block title %}Page Jump{% endblock %}
+{% block head%}{% endblock %}
+{% block main %}
+    <h1 class="text-centered" style="color:steelblue">Common Tools Page Jump</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th><center><img class='logo-inpage' src="{{ url_for('static',filename='images/hsbc-logo.jpg') }}"></center></th>
+                <th><center><img class='logo-inpage' src="{{ url_for('static',filename='images/confluence-logo.jpg') }}"></center></th>
+                <th><center><img class='logo-inpage' src="{{ url_for('static',filename='images/jira-logo.jpg') }}"></center></th>
+                <th><center><img class='logo-inpage' src="{{ url_for('static',filename='images/github-logo.jpg') }}"></center></th>
+                <th><center><img class='logo-inpage' src="{{ url_for('static',filename='images/jenkins-logo.jpg') }}"></center></th>
+                <th><center><img class='logo-inpage' src="{{ url_for('static',filename='images/ftx-logo.png') }}"></center></th>
+                <th><center><img class='logo-inpage' src="{{ url_for('static',filename='images/tower-logo.png') }}"></center></th>
+                <th><center><img class='logo-inpage' src="{{ url_for('static',filename='images/nexus-logo.png') }}"></center></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><center><a href="" class="btn btn-primary">Pipline</a></center>
+                <td>
+                    <center><a href="" class="btn btn-primary">Dashboard</a></center>
+                    <p></p>
+{#                    <center><a href="" class="btn btn-primary">Deployment Guide</a></center>#}
+                    <center>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Deployment Guide
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="">fffffff</a>
+                                </li>
+                                <li>
+                                    <a href="">fffffff</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </center>
+                </td>
+                <td><center><a href="" class="btn btn-primary">Pipline</a></center></td>
+                <td><center><a href="" class="btn btn-primary">Digital Platform</a></center></td>
+                <td><center><a href="" class="btn btn-primary">Platform</a></center></td>
+                <td><center><a href="" class="btn btn-primary">Platform</a></center></td>
+                <td><center><a href="" class="btn btn-primary">Platform</a></center></td>
+                <td><center><a href="" class="btn btn-primary">Platform</a></center></td>
+            </tr>
+    </tbody>
+    </table>
+{% endblock %}

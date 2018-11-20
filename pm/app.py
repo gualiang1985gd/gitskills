@@ -145,6 +145,11 @@ def modify_db_info():
                 write_db_json(db_json)
                 return redirect(url_for('db_info'))
 
+@app.route('/pagejump')
+@login_required
+def page_jump():
+    return render_template('page_jump.html')
+
 @app.before_request
 def my_before_request():
     user_user = session.get('user_user')

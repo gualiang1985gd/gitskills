@@ -3,6 +3,11 @@
     width: 100px;
 }
 
+.logo-inpage{
+    height: 30px;
+    width: 90px;
+}
+
 body{
     /*background: #f3f3f3;*/
     background: #ffffff;
